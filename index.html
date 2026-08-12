@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>श्री गुरु पूर्णिमा महोत्सव 2026 | कृष्णम् वन्दे जगद्गुरुम्</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Georgia, "Noto Serif Devanagari", serif;
+    background: #faf5e9;
+    color: #3d2415;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    background:
+        radial-gradient(circle at top, rgba(255,220,150,.45), transparent 40%),
+        linear-gradient(135deg, #fff8e7, #f4d59b, #fff3d1);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "ॐ";
+    position: absolute;
+    font-size: 28rem;
+    opacity: .035;
+    color: #8a4b16;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+}
+
+.small-title {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(2.3rem, 7vw, 5.5rem);
+    color: #7a3f12;
+    margin-bottom: 20px;
+}
+
+.main-mantra {
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #a05219;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.subtitle {
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-style: italic;
+    margin-bottom: 40px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 32px;
+    background: #8a4515;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.hero-button:hover {
+    transform: translateY(-3px);
+    background: #642f0c;
+}
+
+/* GENERAL */
+section {
+    padding: 80px 6%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #7a3f12;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    color: #6d5745;
+}
+
+/* INTRO */
+.intro {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    line-height: 2;
+    font-size: 1.2rem;
+}
+
+/* TIMELINE */
+.timeline {
+    max-width: 900px;
+    margin: auto;
+    border-left: 3px solid #c78b43;
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 35px;
+}
+
+.timeline-item h3 {
+    color: #8a4515;
+    font-size: 1.4rem;
+    margin-bottom: 8px;
+}
+
+/* GALLERY */
+.gallery {
+    columns: 4 250px;
+    column-gap: 18px;
+}
+
+.photo {
+    width: 100%;
+    margin-bottom: 18px;
+    break-inside: avoid;
+    border-radius: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(80,40,10,.15);
+    transition: transform .3s, box-shadow .3s;
+    background: white;
+}
+
+.photo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(80,40,10,.25);
+}
+
+.photo img {
+    width: 100%;
+    display: block;
+}
+
+/* PLACEHOLDER */
+.gallery-note {
+    background: #fffaf0;
+    border: 2px dashed #c78b43;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    line-height: 1.8;
+}
+
+/* FEATURED */
+.featured {
+    background: linear-gradient(135deg, #fff4d8, #f5dfb5);
+}
+
+/* MAHOTSAV */
+.mahotsav {
+    text-align: center;
+    background:
+        radial-gradient(circle, rgba(255,220,140,.3), transparent 50%),
+        #f4dfb6;
+}
+
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.event-card {
+    background: rgba(255,255,255,.65);
+    padding: 30px 20px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(70,35,10,.1);
+}
+
+.event-card h3 {
+    color: #7a3f12;
+    margin-bottom: 12px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 70px 20px;
+    background: #4b2815;
+    color: #fff4d8;
+}
+
+footer h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 20px;
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.92);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 90vh;
+    border-radius: 8px;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width: 600px) {
+    section {
+        padding: 60px 5%;
+    }
+
+    .gallery {
+        columns: 2 140px;
+        column-gap: 10px;
+    }
+
+    .photo {
+        margin-bottom: 10px;
+        border-radius: 9px;
+    }
+
+    .timeline {
+        padding-left: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header class="hero">
+
+<div class="hero-content">
+
+<div class="small-title">
+॥ श्री सीतारामाय नमः ॥
+&nbsp;&nbsp;&nbsp;
+॥ श्री गणेशाय नमः ॥
+&nbsp;&nbsp;&nbsp;
+॥ श्री राधा कृष्णाय नमः ॥
+</div>
+
+<h1>श्री गुरु पूर्णिमा महोत्सव 2026</h1>
+
+<div class="main-mantra">
+कृष्णम् वन्दे जगद्गुरुम्
+</div>
+
+<div class="subtitle">
+A Lifetime Achievement
+</div>
+
+<p style="font-size:1.2rem; margin-bottom:35px;">
+जुलाई 2025 से जुलाई 2026 तक की अविस्मरणीय स्मृतियों का संकलन
+</p>
+
+<a href="#memories" class="hero-button">
+स्मृतियों की यात्रा प्रारम्भ करें
+</a>
+
+</div>
+</header>
+
+
+<!-- INTRODUCTION -->
+<section>
+
+<div class="section-title">
+<h2>🌸 एक अविस्मरणीय यात्रा</h2>
+<p>A Journey of Memories, Seva and Devotion</p>
+</div>
+
+<div class="intro">
+
+<p>
+यह वेबसाइट जुलाई 2025 से जुलाई 2026 तक की उन अनमोल स्मृतियों
+का डिजिटल संकलन है, जिन्हें तस्वीरों के माध्यम से संजोया गया है।
+</p>
+
+<br>
+
+<p>
+सेवा, सत्संग, भजन, संकीर्तन, उत्सव और गुरु पूर्णिमा महोत्सव
+के विभिन्न पावन क्षणों को एक स्थान पर सुरक्षित रखने का
+यह एक छोटा सा प्रयास है।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- JOURNEY -->
+<section>
+
+<div class="section-title">
+<h2>🕉️ स्मृतियों की यात्रा</h2>
+<p>July 2025 — July 2026</p>
+</div>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<h3>जुलाई 2025</h3>
+<p>एक नई स्मृति यात्रा का आरम्भ।</p>
+</div>
+
+<div class="timeline-item">
+<h3>2025 — 2026</h3>
+<p>सेवा, सत्संग, भजन, संकीर्तन और अनेक अविस्मरणीय क्षण।</p>
+</div>
+
+<div class="timeline-item">
+<h3>जुलाई 2026</h3>
+<p>श्री गुरु पूर्णिमा महोत्सव 2026 — एक ऐतिहासिक पड़ाव।</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GALLERY -->
+<section id="memories">
+
+<div class="section-title">
+<h2>📸 हमारी स्मृतियाँ</h2>
+<p>Memories preserved forever</p>
+</div>
+
+<div class="gallery-note">
+
+<h3>📷 आपकी तस्वीरें यहाँ दिखाई देंगी</h3>
+
+<p>
+अपनी photographs को वेबसाइट की
+<strong>photos</strong> folder में जोड़ें।
+</p>
+
+<p>
+आपको photographs को महीने के अनुसार व्यवस्थित करने की आवश्यकता नहीं है।
+Random photographs भी इस gallery में प्रदर्शित की जा सकती हैं।
+</p>
+
+</div>
+
+<div class="gallery">
+
+<!--
+PHOTO EXAMPLE
+
+जब आप photos folder में तस्वीरें डालेंगे,
+नीचे दिए उदाहरण की तरह उन्हें जोड़ सकते हैं:
+
+<div class="photo">
+<img src="photos/photo1.jpg" alt="Memory">
+</div>
+
+-->
+
+</div>
+
+</section>
+
+
+<!-- FEATURED -->
+<section class="featured">
+
+<div class="section-title">
+<h2>⭐ विशेष स्मृतियाँ</h2>
+<p>Some moments deserve to be remembered forever</p>
+</div>
+
+<div class="intro">
+
+<p>
+यह स्थान आपकी सबसे प्रिय और विशेष तस्वीरों के लिए है।
+बाद में यहाँ चयनित photographs जोड़ी जा सकती हैं।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- GURU PURNIMA -->
+<section class="mahotsav">
+
+<div class="section-title">
+
+<h2>🙏 श्री गुरु पूर्णिमा महोत्सव 2026</h2>
+
+<p>
+The Grand Celebration
+</p>
+
+</div>
+
+<div class="events">
+
+<div class="event-card">
+<h3>श्रीरामचरितमानस</h3>
+<p>अखण्ड पाठ एवं पूर्णाहुति</p>
+</div>
+
+<div class="event-card">
+<h3>श्रीमद्भगवद्गीता</h3>
+<p>सामूहिक पाठ</p>
+</div>
+
+<div class="event-card">
+<h3>हरिनाम संकीर्तन</h3>
+<p>अखण्ड श्री हरिनाम संकीर्तन</p>
+</div>
+
+<div class="event-card">
+<h3>गुरु पूजन</h3>
+<p>पूज्य महाराज श्री का गुरु पूजन</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLOSING -->
+<footer>
+
+<h2>कृष्णम् वन्दे जगद्गुरुम्</h2>
+
+<p style="font-size:1.2rem; line-height:2;">
+कुछ स्मृतियाँ तस्वीरों में कैद होती हैं,<br>
+और कुछ जीवन का हिस्सा बन जाती हैं।
+</p>
+
+<br>
+
+<p>
+श्री गुरु पूर्णिमा महोत्सव 2026
+</p>
+
+<p style="margin-top:10px; opacity:.7;">
+A Lifetime Achievement
+</p>
+
+</footer>
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+
+<span class="close" onclick="closeLightbox()">×</span>
+
+<img id="lightboxImage" src="" alt="Memory">
+
+</div>
+
+
+<script>
+
+const photos = document.querySelectorAll(".photo img");
+
+photos.forEach(photo => {
+
+    photo.addEventListener("click", () => {
+
+        document.getElementById("lightbox").style.display = "flex";
+
+        document.getElementById("lightboxImage").src = photo.src;
+
+    });
+
+});
+
+function closeLightbox() {
+
+    document.getElementById("lightbox").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
